@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch. This course covers HTML, CSS, JavaScript, React, Node.js and MongoDB.",
+    "image": "https://picsum.photos/seed/webdev/800/450",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "UI/UX Design Masterclass",
+    "instructor": "Sarah Johnson",
+    "duration": "15 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "description": "Master the art of UI/UX design using Figma. Learn design principles, wireframing, prototyping and user research.",
+    "image": "https://picsum.photos/seed/design/800/450",
+    "category": "Design"
+  },
+  {
+    "id": 3,
+    "title": "Digital Marketing Strategy",
+    "instructor": "Mike Wilson",
+    "duration": "12 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "description": "Learn SEO, social media marketing, email campaigns and paid advertising to grow any business online.",
+    "image": "https://picsum.photos/seed/marketing/800/450",
+    "category": "Marketing"
+  },
+  {
+    "id": 4,
+    "title": "Python for Data Science",
+    "instructor": "Emily Chen",
+    "duration": "25 hours",
+    "rating": 4.6,
+    "level": "Intermediate",
+    "description": "Master Python programming for data analysis, visualization and machine learning with real-world projects.",
+    "image": "https://picsum.photos/seed/python/800/450",
+    "category": "Development"
+  },
+  {
+    "id": 5,
+    "title": "Graphic Design Fundamentals",
+    "instructor": "Alex Brown",
+    "duration": "10 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Learn the fundamentals of graphic design including typography, color theory, layout and Adobe Photoshop.",
+    "image": "https://picsum.photos/seed/graphic/800/450",
+    "category": "Design"
+  },
+  {
+    "id": 6,
+    "title": "React & Next.js Complete Guide",
+    "instructor": "David Lee",
+    "duration": "30 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Build modern web applications with React and Next.js. Learn hooks, routing, SSR, API routes and deployment.",
+    "image": "https://picsum.photos/seed/react/800/450",
+    "category": "Development"
+  }
+]
