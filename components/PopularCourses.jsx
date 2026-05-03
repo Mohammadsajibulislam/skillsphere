@@ -1,6 +1,8 @@
 import courses from "@/data/courses.json";
 import Link from "next/link";
 import Image from "next/image";
+import { FaUserTie, FaStar } from "react-icons/fa";
+import { MdOutlineSignalCellularAlt } from "react-icons/md";
 
 export default function PopularCourses() {
   const popular = [...courses]
@@ -28,10 +30,16 @@ export default function PopularCourses() {
             </figure>
             <div className="card-body">
               <h3 className="card-title text-lg">{course.title}</h3>
-              <p className="text-sm text-gray-500">Instructor: {course.instructor}</p>
+              <p className="text-sm text-gray-500 flex items-center gap-1">
+                <FaUserTie className="text-primary" /> {course.instructor}
+              </p>
               <div className="flex items-center gap-2 mt-1">
-                <span className="text-yellow-500 font-bold">⭐ {course.rating}</span>
-                <span className="badge badge-outline badge-sm">{course.level}</span>
+                <span className="text-yellow-500 font-bold flex items-center gap-1">
+                  <FaStar /> {course.rating}
+                </span>
+                <span className="badge badge-outline badge-sm flex items-center gap-1">
+                  <MdOutlineSignalCellularAlt /> {course.level}
+                </span>
               </div>
               <div className="card-actions mt-3">
                 <Link

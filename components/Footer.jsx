@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer className="bg-neutral text-neutral-content mt-auto">
       <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-        
+
         {/* Brand */}
         <div>
           <h2 className="text-2xl font-bold mb-3">
@@ -18,13 +19,19 @@ export default function Footer() {
         {/* Contact */}
         <div>
           <h3 className="font-semibold text-lg mb-3">Contact Us</h3>
-          <p className="text-sm opacity-75">📧 support@skillsphere.com</p>
-          <p className="text-sm opacity-75">📞 +880 1234-567890</p>
-          <p className="text-sm opacity-75">📍 Dhaka, Bangladesh</p>
-          <div className="flex gap-3 mt-4">
-            <a href="#" className="btn btn-sm btn-ghost">Facebook</a>
-            <a href="#" className="btn btn-sm btn-ghost">Twitter</a>
-            <a href="#" className="btn btn-sm btn-ghost">YouTube</a>
+          <p className="text-sm opacity-75 flex items-center gap-2 mb-2">
+            <FaEnvelope className="text-primary" /> support@skillsphere.com
+          </p>
+          <p className="text-sm opacity-75 flex items-center gap-2 mb-2">
+            <FaPhone className="text-primary" /> +880 1234-567890
+          </p>
+          <p className="text-sm opacity-75 flex items-center gap-2 mb-4">
+            <FaMapMarkerAlt className="text-primary" /> Dhaka, Bangladesh
+          </p>
+          <div className="flex gap-4">
+            <a href="#" className="text-xl hover:text-primary transition"><FaFacebook /></a>
+            <a href="#" className="text-xl hover:text-primary transition"><FaTwitter /></a>
+            <a href="#" className="text-xl hover:text-primary transition"><FaYoutube /></a>
           </div>
         </div>
 

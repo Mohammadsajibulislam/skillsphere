@@ -1,28 +1,30 @@
+import { FaCalendarAlt, FaBullseye, FaPencilAlt, FaRedo } from "react-icons/fa";
+
 const tips = [
   {
     id: 1,
-    icon: "📅",
+    icon: <FaCalendarAlt className="text-primary text-4xl" />,
     title: "Set a Study Schedule",
     description:
       "Dedicate specific hours each day for learning. Consistency is the key to mastering any skill.",
   },
   {
     id: 2,
-    icon: "🎯",
+    icon: <FaBullseye className="text-secondary text-4xl" />,
     title: "Set Clear Goals",
     description:
       "Break your learning into small achievable goals. Celebrate every milestone you reach.",
   },
   {
     id: 3,
-    icon: "📝",
+    icon: <FaPencilAlt className="text-accent text-4xl" />,
     title: "Take Notes",
     description:
       "Write down key concepts while learning. It helps you retain information much better.",
   },
   {
     id: 4,
-    icon: "🔁",
+    icon: <FaRedo className="text-success text-4xl" />,
     title: "Practice Regularly",
     description:
       "Apply what you learn through projects and exercises. Practice makes perfect.",
@@ -46,7 +48,7 @@ export default function LearningTips() {
               key={tip.id}
               className="card bg-base-100 shadow-md hover:shadow-xl transition p-6 text-center"
             >
-              <div className="text-5xl mb-4">{tip.icon}</div>
+              <div className="flex justify-center mb-4">{tip.icon}</div>
               <h3 className="font-bold text-lg mb-2">{tip.title}</h3>
               <p className="text-sm text-gray-500">{tip.description}</p>
             </div>

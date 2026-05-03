@@ -3,6 +3,8 @@ import { useState } from "react";
 import courses from "@/data/courses.json";
 import Link from "next/link";
 import Image from "next/image";
+import { FaUserTie, FaStar, FaClock, FaSearch } from "react-icons/fa";
+import { MdOutlineSignalCellularAlt } from "react-icons/md";
 
 export default function CoursesPage() {
   const [search, setSearch] = useState("");
@@ -22,19 +24,22 @@ export default function CoursesPage() {
 
       {/* Search */}
       <div className="flex justify-center mb-10">
-        <input
-          type="text"
-          placeholder="Search courses by title..."
-          className="input input-bordered w-full max-w-lg"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
+        <div className="relative w-full max-w-lg">
+          <FaSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+          <input
+            type="text"
+            placeholder="Search courses by title..."
+            className="input input-bordered w-full pl-10"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
       </div>
 
       {/* Courses Grid */}
       {filtered.length === 0 ? (
         <div className="text-center text-gray-500 text-lg py-20">
-         No courses found for &quot;{search}&quot;
+          No courses found for &quot;{search}&quot;
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -55,17 +60,19 @@ export default function CoursesPage() {
               <div className="card-body">
                 <div className="badge badge-outline">{course.category}</div>
                 <h3 className="card-title text-lg mt-1">{course.title}</h3>
-                <p className="text-sm text-gray-500">
-                  Instructor: {course.instructor}
+                <p className="text-sm text-gray-500 flex items-center gap-1">
+                  <FaUserTie className="text-primary" /> {course.instructor}
                 </p>
-                <p className="text-sm text-gray-500">
-                  Duration: {course.duration}
+                <p className="text-sm text-gray-500 flex items-center gap-1">
+                  <FaClock className="text-primary" /> {course.duration}
                 </p>
                 <div className="flex items-center gap-2 mt-1">
-                  <span className="text-yellow-500 font-bold">
-                    ⭐ {course.rating}
+                  <span className="text-yellow-500 font-bold flex items-center gap-1">
+                    <FaStar /> {course.rating}
                   </span>
-                  <span className="badge badge-sm">{course.level}</span>
+                  <span className="badge badge-sm flex items-center gap-1">
+                    <MdOutlineSignalCellularAlt /> {course.level}
+                  </span>
                 </div>
                 <div className="card-actions mt-3">
                   <Link

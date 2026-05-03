@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FaUsers } from "react-icons/fa";
 
 const instructors = [
   {
@@ -60,7 +61,9 @@ export default function TopInstructors() {
             </div>
             <h3 className="font-bold text-lg">{instructor.name}</h3>
             <p className="text-sm text-primary font-medium">{instructor.subject}</p>
-            <p className="text-sm text-gray-500 mt-1">{instructor.students} students</p>
+            <p className="text-sm text-gray-500 mt-1 flex items-center justify-center gap-1">
+              <FaUsers /> {instructor.students} students
+            </p>
           </div>
         ))}
       </div>
