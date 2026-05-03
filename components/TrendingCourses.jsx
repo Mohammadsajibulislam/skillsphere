@@ -33,7 +33,7 @@ export default function TrendingCourses() {
               <div className="card-body">
                 <div className="badge badge-secondary">{course.category}</div>
                 <h3 className="card-title text-lg mt-1">{course.title}</h3>
-                <p className="text-sm text-gray-500">👨‍🏫 {course.instructor}</p>
+                <p className="text-sm text-gray-500">Instructor: {course.instructor}</p>
                 <div className="flex items-center justify-between mt-2">
                   <span className="text-yellow-500 font-bold">⭐ {course.rating}</span>
                   <span className="text-sm text-gray-400">⏱ {course.duration}</span>

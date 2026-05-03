@@ -28,7 +28,7 @@ export default function PopularCourses() {
             </figure>
             <div className="card-body">
               <h3 className="card-title text-lg">{course.title}</h3>
-              <p className="text-sm text-gray-500">👨‍🏫 {course.instructor}</p>
+              <p className="text-sm text-gray-500">Instructor: {course.instructor}</p>
               <div className="flex items-center gap-2 mt-1">
                 <span className="text-yellow-500 font-bold">⭐ {course.rating}</span>
                 <span className="badge badge-outline badge-sm">{course.level}</span>
