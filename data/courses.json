@@ -7,7 +7,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Learn full-stack web development from scratch. This course covers HTML, CSS, JavaScript, React, Node.js and MongoDB.",
-    "image": "https://picsum.photos/seed/webdev/800/450",
+    "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=450&fit=crop",
     "category": "Development"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.9,
     "level": "Intermediate",
     "description": "Master the art of UI/UX design using Figma. Learn design principles, wireframing, prototyping and user research.",
-    "image": "https://picsum.photos/seed/design/800/450",
+    "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=450&fit=crop",
     "category": "Design"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.7,
     "level": "Beginner",
     "description": "Learn SEO, social media marketing, email campaigns and paid advertising to grow any business online.",
-    "image": "https://picsum.photos/seed/marketing/800/450",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop",
     "category": "Marketing"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.6,
     "level": "Intermediate",
     "description": "Master Python programming for data analysis, visualization and machine learning with real-world projects.",
-    "image": "https://picsum.photos/seed/python/800/450",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=450&fit=crop",
     "category": "Development"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.5,
     "level": "Beginner",
     "description": "Learn the fundamentals of graphic design including typography, color theory, layout and Adobe Photoshop.",
-    "image": "https://picsum.photos/seed/graphic/800/450",
+    "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&h=450&fit=crop",
     "category": "Design"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.9,
     "level": "Advanced",
     "description": "Build modern web applications with React and Next.js. Learn hooks, routing, SSR, API routes and deployment.",
-    "image": "https://picsum.photos/seed/react/800/450",
+    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=450&fit=crop",
     "category": "Development"
   }
 ]

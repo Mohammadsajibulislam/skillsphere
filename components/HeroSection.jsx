@@ -11,22 +11,21 @@ const slides = [
     id: 1,
     title: "Upgrade Your Skills Today",
     subtitle: "Learn from industry experts and build your dream career",
-    bg: "https://picsum.photos/seed/hero1/1400/600",
+    bg: "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 2,
     title: "Learn from Industry Experts",
     subtitle: "Thousands of courses to help you grow professionally",
-    bg: "https://picsum.photos/seed/hero2/1400/600",
+    bg: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1400&h=600&fit=crop",
   },
   {
     id: 3,
     title: "Start Learning for Free",
     subtitle: "Join millions of learners and transform your future",
-    bg: "https://picsum.photos/seed/hero3/1400/600",
+    bg: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1400&h=600&fit=crop",
   },
 ];
-
 export default function HeroSection() {
   return (
     <section className="w-full">

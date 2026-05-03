@@ -3,15 +3,15 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaTwitter, FaYoutube }
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral text-neutral-content mt-auto">
+    <footer className="bg-gradient-to-r from-purple-900 via-indigo-900 to-purple-900 text-white mt-auto">
       <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
 
         {/* Brand */}
         <div>
           <h2 className="text-2xl font-bold mb-3">
-            Skill<span className="text-primary">Sphere</span>
+            Skill<span className="text-primary opacity-100">Sphere</span>
           </h2>
-          <p className="text-sm opacity-75">
+          <p className="text-sm opacity-110">
             Your gateway to modern skills. Learn from industry experts and level up your career.
           </p>
         </div>
@@ -22,16 +22,16 @@ export default function Footer() {
           <p className="text-sm opacity-75 flex items-center gap-2 mb-2">
             <FaEnvelope className="text-primary" /> support@skillsphere.com
           </p>
-          <p className="text-sm opacity-75 flex items-center gap-2 mb-2">
+          <p className="text-sm opacity-100 flex items-center gap-2 mb-2">
             <FaPhone className="text-primary" /> +880 1234-567890
           </p>
-          <p className="text-sm opacity-75 flex items-center gap-2 mb-4">
+          <p className="text-sm opacity-100 flex items-center gap-2 mb-4">
             <FaMapMarkerAlt className="text-primary" /> Dhaka, Bangladesh
           </p>
           <div className="flex gap-4">
-            <a href="#" className="text-xl hover:text-primary transition"><FaFacebook /></a>
-            <a href="#" className="text-xl hover:text-primary transition"><FaTwitter /></a>
-            <a href="#" className="text-xl hover:text-primary transition"><FaYoutube /></a>
+            <a href="#" className="text-xl hover:text-primary transition opacity-100 "><FaFacebook /></a>
+            <a href="#" className="text-xl hover:text-primary transition opacity-100 "><FaTwitter /></a>
+            <a href="#" className="text-xl hover:text-primary transition opacity-100 "><FaYoutube /></a>
           </div>
         </div>
 
@@ -39,7 +39,7 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold text-lg mb-3">Quick Links</h3>
           <div className="flex flex-col gap-2">
-            <Link href="/" className="text-sm opacity-75 hover:opacity-100 transition">Home</Link>
+            <Link href="/" className="text-sm hover:text-purple-300 transition">Home</Link>
             <Link href="/courses" className="text-sm opacity-75 hover:opacity-100 transition">Courses</Link>
             <Link href="#" className="text-sm opacity-75 hover:opacity-100 transition">Terms & Conditions</Link>
             <Link href="#" className="text-sm opacity-75 hover:opacity-100 transition">Privacy Policy</Link>

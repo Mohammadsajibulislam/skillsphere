@@ -2,6 +2,7 @@ import courses from "@/data/courses.json";
 import Link from "next/link";
 import Image from "next/image";
 import { FaUserTie, FaStar, FaClock } from "react-icons/fa";
+import { MdOutlineSignalCellularAlt } from "react-icons/md";
 
 export default function TrendingCourses() {
   const trending = courses.slice(0, 3);
@@ -20,7 +21,7 @@ export default function TrendingCourses() {
           {trending.map((course) => (
             <div
               key={course.id}
-              className="card bg-base-100 shadow-md hover:shadow-xl transition"
+              className="bg-white rounded-2xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden"
             >
               <figure>
                 <Image
@@ -31,28 +32,30 @@ export default function TrendingCourses() {
                   className="w-full h-48 object-cover"
                 />
               </figure>
-              <div className="card-body">
-                <div className="badge badge-secondary">{course.category}</div>
-                <h3 className="card-title text-lg mt-1">{course.title}</h3>
-                <p className="text-sm text-gray-500 flex items-center gap-1">
-                  <FaUserTie className="text-primary" /> {course.instructor}
+              <div className="p-5">
+                <div className="badge badge-outline text-purple-600 border-purple-400 mb-2">
+                  {course.category}
+                </div>
+                <h3 className="font-bold text-lg mb-2 leading-snug">
+                  {course.title}
+                </h3>
+                <p className="text-sm text-gray-500 flex items-center gap-1 mb-1">
+                  <FaUserTie className="text-purple-500" /> {course.instructor}
                 </p>
-                <div className="flex items-center justify-between mt-2">
+                <div className="flex items-center justify-between mb-4">
                   <span className="text-yellow-500 font-bold flex items-center gap-1">
                     <FaStar /> {course.rating}
                   </span>
                   <span className="text-sm text-gray-400 flex items-center gap-1">
-                    <FaClock /> {course.duration}
+                    <FaClock className="text-purple-500" /> {course.duration}
                   </span>
                 </div>
-                <div className="card-actions mt-3">
-                  <Link
-                    href={`/courses/${course.id}`}
-                    className="btn btn-secondary btn-sm w-full"
-                  >
-                    View Details
-                  </Link>
-                </div>
+                <Link
+                  href={`/courses/${course.id}`}
+                  className="block text-center bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-xl transition-all duration-300 hover:scale-105"
+                >
+                  View Details
+                </Link>
               </div>
             </div>
           ))}

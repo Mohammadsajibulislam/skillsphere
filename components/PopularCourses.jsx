@@ -18,7 +18,10 @@ export default function PopularCourses() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {popular.map((course) => (
-          <div key={course.id} className="card bg-base-100 shadow-xl hover:shadow-2xl transition">
+          <div
+            key={course.id}
+            className="bg-white rounded-2xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden"
+          >
             <figure>
               <Image
                 src={course.image}
@@ -28,27 +31,25 @@ export default function PopularCourses() {
                 className="w-full h-48 object-cover"
               />
             </figure>
-            <div className="card-body">
-              <h3 className="card-title text-lg">{course.title}</h3>
-              <p className="text-sm text-gray-500 flex items-center gap-1">
-                <FaUserTie className="text-primary" /> {course.instructor}
+            <div className="p-5">
+              <h3 className="font-bold text-lg mb-2 leading-snug">{course.title}</h3>
+              <p className="text-sm text-gray-500 flex items-center gap-1 mb-3">
+                <FaUserTie className="text-purple-500" /> {course.instructor}
               </p>
-              <div className="flex items-center gap-2 mt-1">
+              <div className="flex items-center justify-between mb-4">
                 <span className="text-yellow-500 font-bold flex items-center gap-1">
                   <FaStar /> {course.rating}
                 </span>
-                <span className="badge badge-outline badge-sm flex items-center gap-1">
+                <span className="text-xs text-gray-400 flex items-center gap-1">
                   <MdOutlineSignalCellularAlt /> {course.level}
                 </span>
               </div>
-              <div className="card-actions mt-3">
-                <Link
-                  href={`/courses/${course.id}`}
-                  className="btn btn-primary btn-sm w-full"
-                >
-                  View Details
-                </Link>
-              </div>
+              <Link
+                href={`/courses/${course.id}`}
+                className="block text-center bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-xl transition-all duration-300 hover:scale-105"
+              >
+                View Details
+              </Link>
             </div>
           </div>
         ))}
