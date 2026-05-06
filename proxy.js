@@ -1,14 +1,15 @@
 import { NextResponse } from "next/server";
 
-export function middleware(request) {
+export function proxy(request) {
   const sessionToken =
     request.cookies.get("better-auth.session_token")?.value ||
     request.cookies.get("__Secure-better-auth.session_token")?.value ||
     request.cookies.get("better-auth.session_token.0")?.value;
 
-  const { pathname } = request.nextUrl;
+  const pathname = request.nextUrl?.pathname || "/";
 
   const protectedRoutes = ["/my-profile", "/update-profile"];
+
   const isProtectedCourse = pathname.startsWith("/courses/");
   const isProtectedRoute = protectedRoutes.some((route) =>
     pathname.startsWith(route)
