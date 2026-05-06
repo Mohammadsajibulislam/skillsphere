@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "../../lib/auth-client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
@@ -17,20 +17,22 @@ export default function RegisterPage() {
   const handleRegister = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const { error } = await authClient.signUp.email({
-      name,
-      email,
-      password,
+    const { data, error } = await authClient.signUp.email({
+      name: name,
+      email: email,
+      password: password,
       image: photoURL,
+      callbackURL: "/",
     });
     setLoading(false);
     if (error) {
       toast.error(error.message || "Registration failed!");
     } else {
-      toast.success("Registration successful!");
+      toast.success("Registration successful! Please check your email to verify your account.");
       router.push("/login");
     }
   };
+
 
   const handleGoogle = async () => {
     await authClient.signIn.social({
