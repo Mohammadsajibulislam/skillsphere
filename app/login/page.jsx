@@ -29,10 +29,15 @@ export default function LoginPage() {
   };
 
   const handleGoogle = async () => {
-    await authClient.signIn.social({
-      provider: "google",
-      callbackURL: "/",
-    });
+    try {
+      await authClient.signIn.social({
+        provider: "google",
+        callbackURL: "/",
+      });
+    } catch (error) {
+      console.error("Google sign-in failed", error);
+      toast.error(error?.message || "Google sign-in failed. Check your auth server.");
+    }
   };
 
   return (
